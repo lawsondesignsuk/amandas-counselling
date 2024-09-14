@@ -1,0 +1,523 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #F0F8FF;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background: #1E90FF; /* Primary Color */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for header */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    max-width: 80px;
+    height: auto;
+    border: 3px solid #FFFFE0; /* Light border around profile picture */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-number {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.call-button {
+    background-color: #FFFFE0; /* Card Background */
+    color: #1E90FF; /* Primary Color */
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for call button */
+}
+
+.call-button:hover {
+    background-color: #1E90FF; /* Primary Color */
+    color: #FFFFE0; /* Card Background */
+}
+
+/* Header Title */
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .profile-picture img {
+        max-width: 60px;
+    }
+
+    .phone-number {
+        font-size: 1rem;
+    }
+
+    .call-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin: 10px 0 0;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 70vh;
+    background: url('Images/room-2.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for hero section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for hero section */
+}
+
+/* Darker Overlay with Gradient */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), /* Darker color with higher opacity */
+        rgba(0, 0, 0, 0.6)
+    );
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #FF6347; /* Secondary Color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better visibility */
+}
+
+.hero-content p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+
+.cta-btn {
+    background-color: #FF6347; /* Secondary Color */
+    color: #FFFFE0; /* Card Background */
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 2; /* Ensure button is on top of overlay */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for CTA button */
+}
+
+.cta-btn:hover {
+    background-color: #FF4500; /* Link Color */
+    color: #FFFFE0; /* Card Background */
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #F8F8F8;
+    color: #333;
+    border-radius: 10px; /* Rounded corners for About section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for About section */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #1E90FF;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-text h3 {
+    margin-top: 20px;
+    color: #1E90FF;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.about-image-container {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+
+.about-img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for About section image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image-container {
+        margin-top: 20px;
+    }
+}
+
+/* Services Section */
+.services {
+    padding: 60px 0;
+    background-color: #FFFFE0; /* Card Background */
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for Services section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for Services section */
+}
+
+.services h2 {
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #FF6347; /* Secondary Color */
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FFFFFF; /* Card Background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #32CD32; /* Accent Color */
+}
+
+.card p {
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Qualifications Section */
+.qualifications {
+    padding: 60px 0;
+    background-color: #1E90FF; /* Primary Color */
+    color: white;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for Qualifications section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for Qualifications section */
+}
+
+.qualifications h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #FFFFE0; /* Card Background */
+}
+
+.qualifications-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.qualifications-img {
+    max-width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for Qualifications image */
+}
+
+.qualifications ul {
+    list-style: none;
+    padding-left: 0;
+    font-weight: 300;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Prices Section */
+.prices {
+    padding: 60px 0;
+    background-color: #F0F8FF; /* Background Color */
+    text-align: center;
+}
+
+.prices h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #FF6347; /* Secondary Color */
+}
+
+.pricing-info p {
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #FFFFE0; /* Card Background */
+    color: #333;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for Contact section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for Contact section */
+}
+
+.contact h2 {
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #32CD32; /* Accent Color */
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-image-container {
+    flex: 1;
+    max-width: 100%;
+}
+
+.contact-img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for Contact section image */
+}
+
+.contact-text {
+    flex: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-text p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4500; /* Link Color */
+    color: #FFFFE0; /* Card Background */
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for CTA button */
+}
+
+.cta-btn:hover {
+    background-color: #FF6347; /* Secondary Color */
+    color: #FFFFE0; /* Card Background */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-image-container {
+        margin-bottom: 20px;
+    }
+
+    .contact-img {
+        max-width: 100%;
+    }
+
+    .contact-text {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .qualifications-content, .contact-content, .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .qualifications-img, .contact-img {
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .phone-number {
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #2F4F4F; /* Dark Slate Gray */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    border-radius: 10px; /* Rounded corners for footer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for footer */
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+.footer-back-to-top {
+    color: #FFFFE0; /* Card Background */
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-back-to-top:hover {
+    color: #FF6347; /* Secondary Color */
+}
+
+/* Additional Styling for New Sections */
+.additional-info {
+    margin-top: 30px;
+    background-color: #f9f9f9; /* Light background for distinction */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for additional info */
+}
+
+.additional-info h3 {
+    margin-bottom: 15px;
+}
+
+.additional-info p {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.contact-text p {
+    margin-bottom: 15px; /* Adjust spacing for new details */
+}
